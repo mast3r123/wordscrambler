@@ -16,6 +16,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(startGame))
         
         if let startUrl = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startUrl) {
@@ -30,7 +31,7 @@ class ViewController: UITableViewController {
         startGame()
     }
 
-    func startGame() {
+    @objc func startGame() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
@@ -61,7 +62,10 @@ class ViewController: UITableViewController {
             errorTitle = "Word not possible"
             errorMessage = "Cannot spell that word from \(title!.lowercased())"
         }
-        
+        showErrorMessage(errorTitle, errorMessage)
+    }
+    
+    func showErrorMessage(_ errorTitle: String, _ errorMessage: String) {
         let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
@@ -81,6 +85,7 @@ class ViewController: UITableViewController {
     }
     
     func isReal(word: String) -> Bool {
+        if (word.count < 3) || (word == title) { return false }
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
