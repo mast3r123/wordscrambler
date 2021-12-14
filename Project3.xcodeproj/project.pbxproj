@@ -13,6 +13,7 @@
 		AF6763862767F8E2004462E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6763842767F8E2004462E6 /* Main.storyboard */; };
 		AF6763882767F8E2004462E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6763872767F8E2004462E6 /* Assets.xcassets */; };
 		AF67638B2767F8E2004462E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6763892767F8E2004462E6 /* LaunchScreen.storyboard */; };
+		AF6763932768F6F2004462E6 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF6763922768F6F2004462E6 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AF6763872767F8E2004462E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF67638A2767F8E2004462E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF67638C2767F8E2004462E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF6763922768F6F2004462E6 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		AF67637D2767F8E2004462E6 /* Project3 */ = {
 			isa = PBXGroup;
 			children = (
+				AF6763922768F6F2004462E6 /* start.txt */,
 				AF67637E2767F8E2004462E6 /* AppDelegate.swift */,
 				AF6763802767F8E2004462E6 /* SceneDelegate.swift */,
 				AF6763822767F8E2004462E6 /* ViewController.swift */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF67638B2767F8E2004462E6 /* LaunchScreen.storyboard in Resources */,
+				AF6763932768F6F2004462E6 /* start.txt in Resources */,
 				AF6763882767F8E2004462E6 /* Assets.xcassets in Resources */,
 				AF6763862767F8E2004462E6 /* Main.storyboard in Resources */,
 			);
